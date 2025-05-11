@@ -71,7 +71,7 @@ my telegram @Clof1k             my telegram @Clof1k
                       my telegram @Clof1k                      my telegram @Clof1k             my telegram @Clof1k
 
                       my telegram @Clof1k
-                                                    my telegram @Clof1k             my telegram @Clof1ks
+                                                    my telegram @Clof1k             my telegram @Clof1k
 
                       my telegram @Clof1k
 
