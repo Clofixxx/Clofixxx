@@ -60,23 +60,23 @@ python bot.py
 
 my telegram @Clof1ks             my telegram @Clof1ks
 
-                      my telegram @Clof1ks my telegram @Clof1ks             my telegram @Clof1ks
+                      my telegram @Clof1ks my telegram @Clof1ks           my telegram @Clof1k
 
                
-my telegram @Clof1ks             my telegram @Clof1ks
+my telegram @Clof1k           my telegram @Clof1k
 
                       my telegram @Clof1ks
-my telegram @Clof1ks             my telegram @Clof1ks
+my telegram @Clof1k             my telegram @Clof1k
 
-                      my telegram @Clof1ks                      my telegram @Clof1ks             my telegram @Clof1ks
+                      my telegram @Clof1k                      my telegram @Clof1k             my telegram @Clof1k
 
-                      my telegram @Clof1ks
+                      my telegram @Clof1k
                                                     my telegram @Clof1ks             my telegram @Clof1ks
 
-                      my telegram @Clof1ks
+                      my telegram @Clof1k
 
 s
-       my telegram @Clof1ks                                  my telegram @Clof1ks             my telegram @Clof1ks
+       my telegram @Clof1k                                  my telegram @Clof1k            my telegram @Clof1k
 
-                      my telegram @Clof1ks
+                      my telegram @Clof1k
 
