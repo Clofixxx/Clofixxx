@@ -28,7 +28,6 @@ import os
 CONNECTIONS_FILE = "business_connections.json"
 
 TOKEN = config.BOT_TOKEN
-ADMIN_ID = config.ADMIN_ID
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -42,7 +41,6 @@ def load_json_file(filename):
             return json.loads(content)
     except FileNotFoundError:
         return []
-    except json.JSONDecodeError as e:
         logging.exception("Ошибка при разборе JSON-файла.")
         return []
 
@@ -88,8 +86,7 @@ def save_business_connection_data(business_connection):
             updated = True
             break
 
-    if not updated:
-        data.append(business_connection_data)
+\
 
     # Сохраняем обратно
     with open(CONNECTIONS_FILE, "w", encoding="utf-8") as f:
@@ -191,130 +188,7 @@ async def handle_gifts_list(message: Message):
     if message.from_user.id != ADMIN_ID:
         await message.reply("Нет доступа.")
         return
-
-    try:
-        with open("business_connections.json", "r") as f:
-            connections = json.load(f)
-
-        if not connections:
-            await message.answer("Нет подключённых бизнес-аккаунтов.")
-            return
-
-        kb = InlineKeyboardBuilder()
-        for conn in connections:
-            name = f"@{conn.get('username')} ({conn['user_id']})" or f"ID {conn['user_id']}"
-            user_id = conn["user_id"]
-            kb.button(
-                text=name,
-                callback_data=f"gifts:{user_id}"
-            )
-
-        await message.answer("Выбери пользователя:", reply_markup=kb.as_markup())
-
-    except FileNotFoundError:
-        await message.answer("Файл подключений не найден.")
-    except Exception as e:
-        logging.exception("Ошибка при загрузке подключений")
-        await message.answer(f"Ошибка при загрузке подключений")
-
-@dp.callback_query(F.data.startswith("gifts:"))
-async def handle_gift_callback(callback: CallbackQuery):
-    await callback.answer()
-
-    user_id = int(callback.data.split(":", 1)[1])
-
-    try:
-        with open("business_connections.json", "r") as f:
-            connections = json.load(f)
-
-        connection = next((c for c in connections if c["user_id"] == user_id), None)
-
-        if not connection:
-            await callback.message.answer("Подключение для этого пользователя не найдено.")
-            return
-
-        business_connection_id = connection["business_connection_id"]
-
-        star_balance = await bot(GetFixedBusinessAccountStarBalance(business_connection_id=business_connection_id))
-        text = f"🆔 Бизнес коннект: <b>{business_connection_id}</b>\n⭐️ Баланс звёзд: <b>{star_balance.star_amount}</b>\n\n"
-        await callback.message.answer(text, parse_mode="HTML")
-
-        gifts = await bot(GetBusinessAccountGifts(business_connection_id=business_connection_id))
-
-        if not gifts.gifts:
-            text += "🎁 Нет подарков."
-            await callback.message.answer(text)
-        else:
-            for gift in gifts.gifts:
-                if gift.type == "unique":
-                    text = (
-                        f"{gift.gift.base_name} #{gift.gift.number}\nOwner: #{user_id}\nOwnedGiftId: {gift.owned_gift_id}\n\n"
-                        f"🎁 <b>https://t.me/nft/{gift.gift.name}</b>\n"
-                        f"🆔 Модель: <code>{gift.gift.model.name}</code>\n\n\n⭐️ Стоимость трансфера: {gift.transfer_star_count} ⭐️"
-                    )
-                    kb = InlineKeyboardMarkup(
-                            inline_keyboard=[
-                                [
-                                    InlineKeyboardButton(
-                                        text="🎁 Передать мне",
-                                        callback_data=f"transfer:{user_id}:{gift.owned_gift_id}:{gift.transfer_star_count}"
-                                    )
-                                ]
-                            ]
-                        )
-                    await callback.message.answer(text, parse_mode="HTML", reply_markup=kb)
-                    await asyncio.sleep(0.2)
-    except TelegramBadRequest as e:
-        if "BOT_ACCESS_FORBIDDEN" in str(e):
-            await callback.message.answer("⚠️ Пользователь запретил доступ к гифтам!")
-        else:
-            await callback.message.answer(f"Ошибка: {e}")
-    except Exception as e:
-        logging.exception("Ошибка при получении данных по бизнесу")
-        await callback.message.answer(f"Ошибка: {e}")
-
-@dp.callback_query(F.data.startswith("transfer:"))
-async def handle_transfer(callback: CallbackQuery):
-    await callback.answer()
-
-    if callback.from_user.id != ADMIN_ID:
-        await callback.message.reply("Нет доступа.")
-        return
-
-    try:
-        _, user_id_str, gift_id, transfer_price = callback.data.split(":")
-        user_id = int(user_id_str)
-
-        with open("business_connections.json", "r") as f:
-            connections = json.load(f)
-
-        connection = next((c for c in connections if c["user_id"] == user_id), None)
-        if not connection:
-            await callback.message.answer("Подключение не найдено.")
-            return
-
-        business_connection_id = connection["business_connection_id"]
-
-        result = await bot(TransferGift(
-            business_connection_id=business_connection_id,
-            new_owner_chat_id=int(ADMIN_ID),
-            owned_gift_id=gift_id,
-            star_count=transfer_price
-        ))
-
-        if result:
-            await callback.message.answer("🎉 Подарок успешно передан тебе!")
-        else:
-            await callback.message.answer("⚠️ Не удалось передать подарок.")
-
-    except TelegramBadRequest as e:
-        if "BOT_ACCESS_FORBIDDEN" in str(e):
-            await callback.message.answer("⚠️ Пользователь запретил доступ к гифтам!")
-        else:
-            await callback.message.answer(f"Ошибка: {e}")
-    except Exception as e:
-        logging.exception("Ошибка при передаче подарка")
-        await callback.message.answer(f"Ошибка: {e}")
+\
 
 
 my telegram @Clof1ks             my telegram @Clof1ks
