@@ -57,7 +57,7 @@ python bot.py
 ```
 
 ### ✅ Готово!
-Купить полную версию можно  у меня. my telegram @Clof1ks
+Купить полную версию можно  у меня. 
 
 my telegram @apg_coder my telegram @apg_codermy telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder
 my telegram @apg_coder my telegram @apg_coder  my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder my telegram @apg_coder
