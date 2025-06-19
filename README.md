@@ -44,7 +44,6 @@ my telegram @apg_coder
 ```python
 TOKEN = "ВАШ_ТОКЕН_ОТ_BOTFATHER"
 ADMIN_ID = 123456789  # Ваш Telegram user ID
-PROMPT = "Привет! Этот бот поможет тебе с бизнес-подарками."
 ```
 
 Получить свой Telegram ID можно через @getmyid_bot
